@@ -15,7 +15,7 @@ function [ waypoint ] = getWaypoints(fi,A_p,A_v)
     h=1.2;  % metric
     yaw=0; % rad
     nPoints=size(t,2);
-    waypoint = zeros(7,nPoints+1);
+    waypoint = zeros(7,nPoints);
     for i=1:nPoints
         waypoint(1,i)=i;
         waypoint(2,i)=x(i);
@@ -28,14 +28,8 @@ function [ waypoint ] = getWaypoints(fi,A_p,A_v)
     
     waypoint(6,1)=0;
     waypoint(7,1)=0;
-    
-    waypoint(1,nPoints+1)=nPoints+1;
-    waypoint(2,nPoints+1)=waypoint(2,nPoints);
-    waypoint(3,nPoints+1)=waypoint(3,nPoints);
-    waypoint(4,nPoints+1)=h;
-    waypoint(5,nPoints+1)=yaw;
-    waypoint(6,nPoints+1)=0;
-    waypoint(7,nPoints+1)=0;
+    waypoint(6,nPoints)=0;
+    waypoint(7,nPoints)=0;
     
 
    
