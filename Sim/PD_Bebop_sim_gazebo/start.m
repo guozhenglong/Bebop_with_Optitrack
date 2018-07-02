@@ -3,18 +3,13 @@
 clear;
 close all;
 clc;
-Is_sim = 1; % simulation gazebo
+
 sampleTime = 0.01; 
-k_p_xy = 0.7;
-k_d_xy = 0.5;
-k_i_xy = 0.005;
+k_p_xy = 0.8;
+k_d_xy = 0.3;
 k_p_z = 0.6;
 k_d_z = 0.3;
-if Is_sim == 1
-    k_p_yaw = -0.5;
-else
-    k_p_yaw = 0.5;
-end
+k_p_yaw = -0.5;
 limit_cmd_xy = 10;
 %%%%%%%%%%%%%%%%%%%%%%%%
 try
@@ -25,6 +20,5 @@ rosinit;
 end
 % uav_cmd;
 % SingleARDroneCtrl; 
-waypoints1=getWaypoints(0);
-% waypoints2=getWaypoints(-pi);
+waypoints=getWaypoints();
 r2017b_DroneCtrl

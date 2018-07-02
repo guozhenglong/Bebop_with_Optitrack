@@ -27,4 +27,4 @@ end
 % SingleARDroneCtrl; 
 waypoints1=getWaypoints(0);
 waypoints2=getWaypoints(-pi);
-r2016bSingleARDroneCtrl
+r2017b_DroneCtrl
